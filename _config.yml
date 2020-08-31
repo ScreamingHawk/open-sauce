@@ -1,0 +1,18 @@
+title: Open Sauce
+description: >-
+  Open Sauce is a recipe website for the Standen family.
+baseurl: ""
+url: ""
+
+author:
+  name: "Michael Standen"
+  website: https://michael.standen.link
+
+collections:
+  recipes:
+    output: true
+    permalink: /:collection/:path
+
+# Build settings
+markdown: kramdown
+theme: minima

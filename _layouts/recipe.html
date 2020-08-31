@@ -1,0 +1,74 @@
+---
+layout: default
+---
+
+<article class="post">
+	<h1>
+			{{ page.title }}
+	</h1>
+	<a class="button" href="#recipe">Jump to recipe</a>
+
+	<div class="image">
+		<img src="{{ page.featured_image }}" alt="{{ page.title }}">
+	</div>
+
+	<div class="page-content">
+		{{ content }}
+	</div>
+
+	<div id="recipe" class="recipe-overview">
+		<h2>Recipe</h2>
+		<ul>
+			{% if page.recipe.servings %}
+				<li title="Servings">🙂 <span>{{ page.recipe.servings }}</span></li>
+			{% endif %}
+			{% if page.recipe.prep %}
+				<li title="Prep Time">🔪 <span>{{ page.recipe.prep }}</span></li>
+			{% endif %}
+			{% if page.recipe.cook %}
+				<li title="Cook Time">🍳 <span>{{ page.recipe.cook }}</span></li>
+			{% endif %}
+		</ul>
+	</div>
+
+	{% if page.recipe.ratings %}
+		<div class="recipe-ratings">
+			<h2>Ratings</h2>
+			{% assign average_rating = 0 %}
+			<ul>
+				{% for rating in page.recipe.ratings %}
+					{% assign average_rating = average_rating | plus: rating.value %}
+					<li>{{ rating.name }}:
+						{% for i in (1..rating.value) %}🌟{% endfor %}
+					</li>
+				{% endfor %}
+				{% assign average_rating = average_rating | divided_by: page.recipe.ratings.size %}
+				<li class="full">Average:
+					{% for i in (1..average_rating) %}⭐{% endfor %}
+				</li>
+			</ul>
+		</div>
+	{% endif %}
+
+	<div class="recipe-contents">
+		<div class="ingredients">
+			<h2>Ingredients</h2>
+			<ul class="none">
+				{% for i in (1..page.recipe.ingredients.size) %}{% unless forloop.last %}
+					{% assign ingredient=page.recipe.ingredients[i] %}
+					<li><input type="checkbox" id="ing{{ i }}"><label for="ing{{ i }}">{{ ingredient.qty }} {{ ingredient.name }}</label></li>
+				{% endunless %}{% endfor %}
+			</ul>
+		</div>
+
+		<div class="directions">
+			<h2>Directions</h2>
+			<ol class="none">
+				{% for i in (1..page.recipe.directions.size) %}{% unless forloop.last %}
+					{% assign direction=page.recipe.directions[i] %}
+					<li><input type="checkbox" id="dir{{ i }}"><label for="dir{{ i }}">{{ direction }}</label></li>
+				{% endunless %}{% endfor %}
+			</ol>
+		</div>
+	</div>
+</article>

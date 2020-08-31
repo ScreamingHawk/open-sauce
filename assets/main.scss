@@ -1,0 +1,54 @@
+---
+---
+
+@import "minima";
+
+.crop {
+	height: 150px;
+	overflow: hidden;
+	img {
+		margin-top: -25%;
+	}
+}
+
+%horizontal-list {
+	ul {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-around;
+		list-style: none;
+
+		li {
+			font-weight: bold;
+			span {
+				font-weight: normal;
+			}
+
+			&.full {
+				flex-basis: 100%;
+				text-align: center;
+			}
+		}
+	}
+}
+
+ul.none, ol.none {
+	list-style: none;
+	margin-left: 0;
+}
+
+li {
+	margin-bottom: 0.5em;
+}
+
+.recipe-contents {
+	min-height: 80vh;
+}
+
+.recipe-overview {
+	@extend %horizontal-list;
+}
+
+.recipe-ratings {
+	@extend %horizontal-list;
+}
