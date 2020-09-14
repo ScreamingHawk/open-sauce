@@ -3,6 +3,16 @@
 
 @import "minima";
 
+a {
+	color: #f65656;
+	&:hover {
+		color: #e53b3b;
+	}
+	&:visited {
+		color: #b41f1f;
+	}
+}
+
 .crop {
 	height: 150px;
 	overflow: hidden;
