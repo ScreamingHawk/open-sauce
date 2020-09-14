@@ -22,7 +22,7 @@ permalink: /categories.html
 <ul>
 	{% for recipe in site.recipes %}
 		{% if recipe.categories contains category %}
-			<li><a href="{{ site.url }}{{ recipe.url }}">{{ recipe.title}}</a></li>
+			<li><a href="{{ recipe.url | relative_url }}">{{ recipe.title}}</a></li>
 		{% endif %}
 	{% endfor %}
 </ul>
