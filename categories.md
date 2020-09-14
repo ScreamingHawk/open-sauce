@@ -9,6 +9,7 @@ permalink: /categories.html
 		| map: 'categories'
 		| join: ","
 		| split: ","
+		| uniq
 		| sort %}
 
 <ul class="entry-meta">
