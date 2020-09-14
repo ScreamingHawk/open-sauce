@@ -38,8 +38,8 @@ recipe:
 
 A quick and easy dinner for the family.
 
-![Ingredients](/images/map-1.webp)
+![Ingredients]({{ site.url }}{{ site.baseurl }}/images/map-1.webp)
 
-![Pasta](/images/map-2.webp)
+![Pasta]({{ site.url }}{{ site.baseurl }}/images/map-2.webp)
 
 Can be topped with cheese and/or tabasco to suit your tastes.

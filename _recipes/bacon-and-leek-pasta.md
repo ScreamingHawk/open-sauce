@@ -36,6 +36,6 @@ recipe:
 
 I love a good leek.
 
-![Leeks cooking](/images/balp-1.webp)
+![Leeks cooking]({{ site.url }}{{ site.baseurl }}/images/balp-1.webp)
 
-![Finished product](/images/balp-3.webp)
+![Finished product]({{ site.url }}{{ site.baseurl }}/images/balp-3.webp)
