@@ -11,7 +11,7 @@ layout: default
 	<div class="recipe-categories">
 		<ul>
 			{% for category in page.categories %}
-				<li><a href="{{ '/categories' | relative_url }}#{{ category }}">{{ category }}</a></li>
+				<li class="colortag"><a href="{{ '/categories' | relative_url }}#{{ category }}">{{ category }}</a></li>
 			{% endfor %}
 		</ul>
 	</div>
@@ -81,3 +81,5 @@ layout: default
 		{{ content }}
 	</div>
 </article>
+
+{% include colortags.html %}

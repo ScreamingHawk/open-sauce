@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: categories
 title: Categories
 description: "Recipes by Category"
 permalink: /categories.html
@@ -12,11 +12,13 @@ permalink: /categories.html
 		| uniq
 		| sort %}
 
-<ul class="entry-meta">
-	{% for category in categories %}
-		<li><a href="#{{ category }}" class="tag"><span class="term">{{ category }}</span></a></li>
-	{% endfor %}
-</ul>
+<div class="recipe-categories">
+	<ul>
+		{% for category in categories %}
+			<li class="colortag"><a href="#{{ category }}" class="tag"><span class="term">{{ category }}</span></a></li>
+		{% endfor %}
+	</ul>
+</div>
 
 {% for category in categories %}
 <h3 id="{{ category }}">{{ category }}</h3>
