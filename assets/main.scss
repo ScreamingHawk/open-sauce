@@ -3,6 +3,14 @@
 
 @import "minima";
 
+.page-content {
+	padding: 0;
+}
+
+.recipe-content {
+	padding: $spacing-unit 0;
+}
+
 a {
 	color: #f65656;
 	&:hover {
@@ -51,12 +59,12 @@ li {
 	margin-bottom: 0.5em;
 }
 
-.recipe-contents {
-	min-height: 80vh;
-}
-
 .recipe-overview {
 	@extend %horizontal-list;
+	ul li span {
+		font-style: italic;
+		font-weight: bold;
+	}
 }
 
 .recipe-ratings {
