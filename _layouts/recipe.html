@@ -8,10 +8,19 @@ layout: default
 		<img src="{{ page.featured_image | relative_url }}" alt="{{ page.title }}">
 	</div>
 
+	<div class="recipe-categories">
+		<ul>
+			{% for category in page.categories %}
+				<li><a href="{{ '/categories' | relative_url }}#{{ category }}">{{ category }}</a></li>
+			{% endfor %}
+		</ul>
+	</div>
+
+	<h1>
+		{{ page.title }}
+	</h1>
+
 	<div id="recipe" class="recipe-overview">
-		<h1>
-			{{ page.title }}
-		</h1>
 		<ul>
 			{% if page.recipe.servings %}
 				<li title="Servings">🙂 <span>{{ page.recipe.servings }}</span></li>

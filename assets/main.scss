@@ -59,6 +59,26 @@ li {
 	margin-bottom: 0.5em;
 }
 
+.recipe-categories {
+	@extend %horizontal-list;
+	margin-top: 1em;
+	ul {
+		justify-content: center;
+		li {
+			margin: 0 1em;
+			padding: 0.5em 1em;
+			border-radius: 1em;
+			background: #f65656;
+			a {
+				color: white!important;
+				&:hover {
+					text-decoration: none;
+				}
+			}
+		}
+	}
+}
+
 .recipe-overview {
 	@extend %horizontal-list;
 	ul li span {

@@ -19,7 +19,7 @@ permalink: /categories.html
 </ul>
 
 {% for category in categories %}
-<h3>{{ category }}</h3>
+<h3 id="{{ category }}">{{ category }}</h3>
 <ul>
 	{% for recipe in site.recipes %}
 		{% if recipe.categories contains category %}
