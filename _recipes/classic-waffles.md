@@ -33,7 +33,7 @@ recipe:
     - name: Michael
       value: 5
     - name: Kate
-      value: 2
+      value: 5
 ---
 
 A breakfast favourite.
