@@ -23,7 +23,7 @@ recipe:
     - name: melted butter
       qty: ⅓ cup
     - name: vanilla essence
-      qty: 2 cups
+      qty: 2 teaspoons
   directions:
     - Preheat waffle iron to desired temperature.
     - In a large bowl, mix together flour, baking powder and sugar; set aside.
@@ -33,6 +33,10 @@ recipe:
     - name: Michael
       value: 5
     - name: Kate
+      value: 5
+    - name: Ava
+      value: 5
+    - name: Chloe
       value: 5
 ---
 
