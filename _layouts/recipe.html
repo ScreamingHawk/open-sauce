@@ -75,7 +75,14 @@ layout: default
 
 	<div class="recipe-content">
 		{{ content }}
+
+		{% if page.source %}
+			<div class="post-meta">
+				Based on a recipe at: <a href="{{ page.source }}">{{ page.source }}</a>
+			</div>
+		{% endif %}
 	</div>
+
 </article>
 
 {% include colortags.html %}
