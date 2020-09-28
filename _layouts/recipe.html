@@ -53,7 +53,7 @@ layout: default
 		<div class="ingredients">
 			<h2>Ingredients</h2>
 			<ul class="none">
-				{% for i in (1..page.recipe.ingredients.size) %}{% unless forloop.last %}
+				{% for i in (0..page.recipe.ingredients.size) %}{% unless forloop.last %}
 					{% assign ingredient=page.recipe.ingredients[i] %}
 					<li><input type="checkbox" id="ing{{ i }}"><label for="ing{{ i }}">{{ ingredient.qty }} {{ ingredient.name }}</label></li>
 				{% endunless %}{% endfor %}
@@ -63,7 +63,7 @@ layout: default
 		<div class="directions">
 			<h2>Directions</h2>
 			<ol class="none">
-				{% for i in (1..page.recipe.directions.size) %}{% unless forloop.last %}
+				{% for i in (0..page.recipe.directions.size) %}{% unless forloop.last %}
 					{% assign direction=page.recipe.directions[i] %}
 					<li><input type="checkbox" id="dir{{ i }}"><label for="dir{{ i }}">{{ direction }}</label></li>
 				{% endunless %}{% endfor %}
