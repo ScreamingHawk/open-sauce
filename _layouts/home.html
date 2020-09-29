@@ -23,11 +23,11 @@ layout: default
 				<h3>
 					<a class="post-link" href="{{ post.url | relative_url }}">
 						{{ post.title | escape }}
+						<div class="crop">
+							<img src="{{ post.featured_image | relative_url }}" alt="{{ post.title | escape }}">
+						</div>
 					</a>
 				</h3>
-				<div class="crop">
-					<img src="{{ post.featured_image | relative_url }}" alt="{{ post.title | escape }}">
-				</div>
 			</li>
 			{%- endfor -%}
 		</ul>
