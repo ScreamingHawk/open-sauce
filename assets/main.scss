@@ -90,3 +90,8 @@ li {
 .recipe-ratings {
 	@extend %horizontal-list;
 }
+
+.image {
+	display: flex;
+	justify-content: center;
+}
