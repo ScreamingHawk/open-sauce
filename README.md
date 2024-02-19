@@ -6,13 +6,22 @@ An open source recipe website.
 
 ## Development
 
+Install [Ruby](https://www.ruby-lang.org/en/documentation/installation/) and [Bundler](https://bundler.io/).
+
+
+Install dependencies.
+
+```sh
+bundle install
+```
+
 Build
 
 ```sh
 bundle exec jekyll build
 ```
 
-Serve with Live Reloading
+Serve with live reloading for development
 
 ```sh
 bundle exec jekyll serve --livereload
