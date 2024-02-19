@@ -43,3 +43,5 @@ A quick and easy dinner for the family.
 ![Pasta]({{ site.url }}{{ site.baseurl }}/images/map-2.webp)
 
 Can be topped with cheese and/or tabasco to suit your tastes.
+
+Skip pasta, add kidney beans and nacho flavour packet, then serve with tortilla chips for nachos.
