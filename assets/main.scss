@@ -88,6 +88,32 @@ li {
 	}
 }
 
+.wake-lock-control {
+	display: none;
+	margin: 0 0 1.5em;
+	text-align: center;
+
+	button {
+		background: #f65656;
+		border: 0;
+		border-radius: 0.5em;
+		color: white;
+		font: inherit;
+		font-weight: bold;
+		padding: 0.75em 1.25em;
+	}
+
+	button[aria-pressed="true"] {
+		background: #2f7d4a;
+	}
+}
+
+@media (max-width: 960px) and (pointer: coarse) {
+	.wake-lock-control {
+		display: block;
+	}
+}
+
 .recipe-ratings {
 	@extend %horizontal-list;
 }

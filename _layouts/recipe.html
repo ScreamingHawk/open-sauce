@@ -30,6 +30,10 @@ layout: default
 		</ul>
 	</div>
 
+	<div class="wake-lock-control">
+		<button id="wake-lock-button" type="button" aria-pressed="false">Keep screen on</button>
+	</div>
+
 	{% if page.recipe.ratings %}
 		<div class="recipe-ratings">
 			<h2>Ratings</h2>
@@ -85,4 +89,5 @@ layout: default
 
 </article>
 
+<script src="{{ '/assets/wake-lock.js' | relative_url }}" defer></script>
 {% include colortags.html %}
